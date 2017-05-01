@@ -16,7 +16,7 @@
             var els = row.getElementsByClassName('identity-picker-resolved-name');
             var name = els.length ? els[0].innerHTML : '';
 
-            if (validNames.includes(name)) {
+            if (validNames.indexOf(name) !== -1) {
                 row.style.display = 'table-row';
                 hideRow = true;
             } else {
@@ -28,4 +28,4 @@
 })();
 
 // Minified...
-(function(){for(var f,a=['Ben Feely','Jane Doe','Virender Mann'],b=document.getElementById('taskboard-table-body').getElementsByClassName('taskboard-row'),c=!1,d=!1,e=0;e<b.length;e++)if(f=b[e],c||d)f.style.display=c?'table-row':'none',d=!1,c=!1;else{var g=f.getElementsByClassName('identity-picker-resolved-name'),h=g.length?g[0].innerHTML:'';a.includes(h)?(f.style.display='table-row',d=!0):(f.style.display='none',c=!0)}})();
+!function(){for(var a=["Ben Feely","Jane Doe"],b=document.getElementById("taskboard-table-body").getElementsByClassName("taskboard-row"),c=!1,d=!1,e=0;e<b.length;e++){var f=b[e];if(c||d)f.style.display=c?"table-row":"none",d=!1,c=!1;else{var g=f.getElementsByClassName("identity-picker-resolved-name"),h=g.length?g[0].innerHTML:"";-1!==a.indexOf(h)?(f.style.display="table-row",d=!0):(f.style.display="none",c=!0)}}}();
